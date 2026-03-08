@@ -6,19 +6,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (mobileBtn && navMenu) {
         mobileBtn.addEventListener('click', () => {
-            navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
-
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.flexDirection = 'column';
-                navMenu.style.position = 'absolute';
-                navMenu.style.top = '100%';
-                navMenu.style.left = '0';
-                navMenu.style.right = '0';
-                navMenu.style.background = 'white';
-                navMenu.style.padding = '2rem';
-                navMenu.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
-                navMenu.style.borderTop = '1px solid #eee';
+            navMenu.classList.toggle('active');
+            const icon = mobileBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
             }
+            lucide.createIcons();
         });
     }
 
