@@ -136,4 +136,71 @@ document.addEventListener('DOMContentLoaded', () => {
             behavior: 'smooth'
         });
     });
+
+    // --- Demo Usuario Navigation ---
+    const demoImg1 = document.getElementById('demo-img-1');
+    const demoImg2 = document.getElementById('demo-img-2');
+    const prevBtn = document.getElementById('prev-step');
+    const nextBtn = document.getElementById('next-step');
+    const currentStepText = document.getElementById('current-step');
+    const progressBar = document.getElementById('demo-progress');
+
+    let currentStep = 1;
+    const totalSteps = 15;
+    let activeImg = demoImg1;
+    let inactiveImg = demoImg2;
+    let isTransitioning = false;
+
+    const updateDemo = (isInitial = false) => {
+        if (!isInitial) {
+            isTransitioning = true;
+            // Preload and Cross-fade
+            inactiveImg.src = `./assets/PANTALLAS UNNION/USUARIO/${currentStep}.jpeg`;
+            inactiveImg.onload = () => {
+                activeImg.classList.remove('active');
+                inactiveImg.classList.add('active');
+
+                // Swap pointers
+                [activeImg, inactiveImg] = [inactiveImg, activeImg];
+
+                // Wait for CSS transition to finish before allowing next click
+                setTimeout(() => {
+                    isTransitioning = false;
+                }, 600);
+            };
+        } else {
+            // Initial load: set the first image directly and make it active
+            activeImg.src = `./assets/PANTALLAS UNNION/USUARIO/${currentStep}.jpeg`;
+            activeImg.classList.add('active');
+        }
+
+        // Update Text and Progress
+        currentStepText.textContent = currentStep;
+        const progress = (currentStep / totalSteps) * 100;
+        progressBar.style.width = `${progress}%`;
+
+        // Update Buttons
+        prevBtn.disabled = currentStep === 1;
+        nextBtn.disabled = currentStep === totalSteps;
+    };
+
+    if (prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            if (currentStep > 1 && !isTransitioning) {
+                currentStep--;
+                updateDemo();
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentStep < totalSteps && !isTransitioning) {
+                currentStep++;
+                updateDemo();
+            }
+        });
+
+        // Initialize state
+        updateDemo(true);
+    }
+
 });
