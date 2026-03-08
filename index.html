@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unnion - Voluntariado Ambiental y de Emergencias</title>
+    <meta name="description"
+        content="La app definitiva para voluntariado ambiental y emergencias. Conecta, ayuda y certifícate. Disponible en iOS y Android.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/icon.png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body id="top">
+
+    <!-- Navegación -->
+    <header class="header">
+        <div class="container nav-wrapper">
+            <a href="#top" class="logo">
+                <img src="./assets/logo.png" alt="Unnion Logo" class="logo-img-header">
+            </a>
+
+            <nav class="nav-menu">
+                <a href="#features" class="nav-link">Características</a>
+                <a href="#chat" class="nav-link">Chat y Comunidad</a>
+                <a href="#entities" class="nav-link">Para Entidades</a>
+                <a href="#about" class="nav-link">Misión</a>
+                <div class="nav-actions">
+                    <a href="#download" class="btn btn-primary">Descargar App</a>
+                </div>
+            </nav>
+
+            <button class="mobile-toggle" aria-label="Abrir menú">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content fade-in-up">
+                <div class="badge">Nuevo</div>
+                <h1>Ayuda real, <br><span class="text-gradient">Impacto local.</span></h1>
+                <p class="hero-description">
+                    La primera app que centraliza el voluntariado ambiental y de emergencias.
+                    Encuentra actividades cerca de ti, chatea con organizaciones y obtén tu certificado oficial.
+                </p>
+
+                <div class="store-buttons">
+                    <a href="Unnion.apk" download class="store-btn">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                            alt="Disponible en Google Play">
+                    </a>
+                    <a href="#" class="store-btn ios-download">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                            alt="Consíguelo en el App Store">
+                    </a>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <strong>+10</strong>
+                        <span>Entidades</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <strong>100%</strong>
+                        <span>Verificado</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-visual fade-in-up delay-1">
+                <!-- Marco de teléfono CSS puro para ajustar la imagen rectangular -->
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <img src="./assets/mock-up-unnion/home-usuario.jpeg" alt="Interfaz de Usuario Unnion"
+                            class="app-screenshot">
+                    </div>
+                </div>
+                <!-- Elementos decorativos flotantes -->
+                <div class="floating-card card-1">
+                    <i data-lucide="map-pin" class="icon-sm"></i>
+                    <span>Reforestación a 5km</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i data-lucide="check-circle" class="icon-sm"></i>
+                    <span>Certificado listo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Características Principales -->
+    <section id="features" class="section bg-light">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2>Todo lo que necesitas para ayudar</h2>
+                <p>Hemos simplificado el voluntariado para que solo te preocupes de lo importante.</p>
+            </div>
+
+            <div class="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card">
+                    <div class="icon-box bg-green">
+                        <i data-lucide="map"></i>
+                    </div>
+                    <h3>Geolocalización Inteligente</h3>
+                    <p>Olvídate de buscar. Unnion te muestra las necesidades reales a tu alrededor en un mapa
+                        interactivo en tiempo real.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card">
+                    <div class="icon-box bg-blue">
+                        <i data-lucide="award"></i>
+                    </div>
+                    <h3>Certificación Oficial</h3>
+                    <p>Tu tiempo vale. Genera automáticamente certificados de tus horas de voluntariado para tu CV o
+                        estudios.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card">
+                    <div class="icon-box bg-orange">
+                        <i data-lucide="shield-check"></i>
+                    </div>
+                    <h3>Seguridad y Confianza</h3>
+                    <p>Todas las entidades están verificadas. Participa en un entorno seguro con seguros y normativa
+                        clara.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Destacada: CHAT -->
+    <section id="chat" class="section section-chat">
+        <div class="container">
+            <div class="split-layout">
+                <div class="split-visual">
+                    <div class="phone-frame small-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="./assets/mock-up-unnion/chat-usuario.jpeg" alt="Chat Entidad"
+                                class="app-screenshot">
+                        </div>
+                    </div>
+                </div>
+                <div class="split-content">
+                    <div class="tag">Comunicación Fluida</div>
+                    <h2>Coordínate sin caos con el Chat Integrado</h2>
+                    <p>
+                        Sabemos que en una emergencia o actividad grande, la coordinación lo es todo.
+                        Unnion incluye un <strong>chat en tiempo real</strong> entre voluntarios y organizaciones.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i data-lucide="check"></i>
+                            <span>Habla directamente con los organizadores.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check"></i>
+                            <span>Resuelve dudas de material o ubicación al instante.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check"></i>
+                            <span>Mantén tu número de teléfono privado.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="check"></i>
+                            <span>Grupos automáticos por actividad.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección para Entidades -->
+    <section id="entities" class="section bg-light">
+        <div class="container">
+            <div class="split-layout reverse">
+                <div class="split-content">
+                    <div class="tag">Para Organizaciones</div>
+                    <h2>¿Eres una entidad? Amplifica tu impacto</h2>
+                    <p>
+                        Unnion es la herramienta que necesitas para gestionar tus actividades de voluntariado de forma
+                        profesional y sin complicaciones.
+                    </p>
+                    <ul class="feature-list">
+                        <li>
+                            <i data-lucide="users"></i>
+                            <span><strong>Alcanza a más voluntarios</strong> - Publica tus actividades y llega a miles
+                                de personas comprometidas.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="calendar-check"></i>
+                            <span><strong>Gestión simplificada</strong> - Organiza inscripciones, asistencias y
+                                certificados desde un solo lugar.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="bar-chart"></i>
+                            <span><strong>Estadísticas en tiempo real</strong> - Mide el impacto de tus acciones con
+                                datos precisos.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="shield"></i>
+                            <span><strong>Verificación oficial</strong> - Tu organización aparecerá como entidad
+                                verificada y de confianza.</span>
+                        </li>
+                    </ul>
+                    <a href="#download" class="btn btn-primary" style="margin-top: 1.5rem;">Registra tu entidad</a>
+                </div>
+                <div class="split-visual">
+                    <div class="phone-frame small-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <img src="./assets/mock-up-unnion/home-enidad.jpeg" alt="Panel Entidad"
+                                class="app-screenshot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión / Nosotros -->
+    <section id="about" class="section bg-dark text-white">
+        <div class="container text-center max-w-800">
+            <img src="./assets/icon.png" alt="Unnion Icon" style="width: 80px; margin-bottom: 2rem;">
+            <h2>Nuestra Misión</h2>
+            <p class="lead">
+                Transformar la intención en acción.
+            </p>
+            <p style="opacity: 0.8;">
+                Unnion nace de la necesidad de modernizar la solidaridad. Vimos que los jóvenes querían ayudar, pero no
+                encontraban cómo.
+                Creamos el puente digital entre tu voluntad de cambio y las organizaciones que luchan por el planeta y
+                las personas.
+            </p>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="download" class="section section-cta">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-content">
+                    <h2>¿Listo para marcar la diferencia?</h2>
+                    <p>Descarga la app hoy y únete a la comunidad de voluntarios más activa.</p>
+                    <div class="store-buttons">
+                        <a href="Unnion.apk" download class="store-btn bg-white">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                alt="Google Play">
+                        </a>
+                        <a href="#" class="store-btn bg-white ios-download">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg"
+                                alt="App Store">
+                        </a>
+                    </div>
+                    <p class="small-text">Disponible gratis para Android e iOS</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <div class="logo">
+                    <a href="#top">
+                        <img src="./assets/logo.png" alt="Unnion" class="logo-img-footer">
+                    </a>
+                </div>
+                <p>Tecnología al servicio de las personas y el planeta.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="link-group">
+                    <h4>Legales</h4>
+                    <a href="privacidad.html">Privacidad</a>
+                    <a href="cookies.html">Cookies</a>
+                    <a href="terminos.html">Términos</a>
+                </div>
+                <div class="link-group">
+                    <h4>Contacto</h4>
+                    <a href="mailto:hola@unnion.app">unnion2026@gmail.com</a>
+                </div>
+            </div>
+        </div>
+        <div class="container copyright">
+            &copy; 2026 Proyecto Unnion. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Subir arriba">
+        <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- Custom Modal -->
+    <div id="custom-modal" class="modal-overlay">
+        <div class="modal-content fade-in-scale">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <div class="modal-body">
+                <div class="modal-icon">
+                    <i data-lucide="info" id="modal-icon-element"></i>
+                </div>
+                <h3 id="modal-title">Título del Mensaje</h3>
+                <p id="modal-text">Descripción del mensaje aquí.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="modal-confirm">Entendido</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
